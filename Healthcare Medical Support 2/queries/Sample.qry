@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.query:Query xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore">
+  <name>Sample</name>
+  <uuid>d9f4057c-2a57-4f29-ab6f-ffdc3bef89d6</uuid>
+  <definition><![CDATA[Find all business rules 
+    such that the definition of each business rule contains "Penicillin"]]></definition>
+  <locale>en_US</locale>
+</ilog.rules.studio.model.query:Query>

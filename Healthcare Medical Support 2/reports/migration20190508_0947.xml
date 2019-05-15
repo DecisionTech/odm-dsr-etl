@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<report xmlns="http://schemas.ibm.com/odm/decisionservice/report/1.0" name="Rule Project Migration - Healthcare Medical Support">
+  <section name="Migration initialization">
+    <event name="Checking migration prerequisites" severity="information" timestamp="1557326848028"></event>
+    <event name="No major issues detected." severity="information" timestamp="1557326848030"></event>
+    <event name="Collecting migration actions" severity="information" timestamp="1557326848030"></event>
+    <event name="Performing migration actions" severity="information" timestamp="1557326848030"></event>
+    <event name="Suspend workspace auto build" severity="information" timestamp="1557326848030"></event>
+  </section>
+  <section name="Performing migration actions on decision operations for project 'Healthcare Medical Support'">
+    <event name="Setting project as standard rule project for decision service" severity="information" timestamp="1557326848030"></event>
+    <event name="Updating project &quot;Healthcare Medical Support&quot; to support decision operations" severity="information" timestamp="1557326848030"></event>
+    <event name="Setting project 'Healthcare Medical Support' as main rule project for decision service" severity="information" timestamp="1557326848030"></event>
+    <event name="Restore workspace auto build" severity="information" timestamp="1557326848030"></event>
+  </section>
+  <section name="Migration done"></section>
+</report>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>variables</name>
+  <uuid>b538803b-02ea-426d-845a-51bf235c9f1f</uuid>
+  <variables name="CCr" type="float" initialValue="" verbalization="creatine clearance"/>
+  <variables name="patient" type="com.demo.Patient" initialValue="" verbalization="the patient"/>
+</ilog.rules.studio.model.base:VariableSet>

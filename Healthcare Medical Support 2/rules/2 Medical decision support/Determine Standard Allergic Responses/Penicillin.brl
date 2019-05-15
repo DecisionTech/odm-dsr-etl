@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Penicillin</name>
+  <uuid>42996ed1-49b5-4069-be8d-84e916376681</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'the patient' has allergy with Penicillin
+then 
+    Send message to 'the patient' : "Recommending Levofloxacin in place of Penicillin" ;
+    Recommended drug for 'the patient' is Levofloxacin;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

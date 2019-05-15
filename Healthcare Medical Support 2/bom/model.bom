@@ -1,0 +1,53 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/Healthcare Medical Support 2//Java XOM"
+property uuid "5e973311-e45d-44aa-8c84-b01ed41ac479"
+package com.demo;
+
+
+public class Medication
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "1"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "2"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "0"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "domains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain {static coumadin, static levoflaxin, static penicillin, static amoxicillin, static cefuroxime}
+    public string NDC;
+    public static final readonly com.demo.Medication amoxicillin;
+    public static final readonly com.demo.Medication cefuroxime;
+    public static final readonly com.demo.Medication coumadin;
+    public static final readonly com.demo.Medication levoflaxin;
+    public string name;
+    public static final readonly com.demo.Medication penicillin;
+    public Medication(string arg1, string arg2);
+    public Medication();
+    public static com.demo.Medication Create(string arg);
+    public void doit();
+    public boolean equals(object arg);
+    public string toString();
+}
+
+public class Patient
+{
+    public int AST;
+    public java.util.ArrayList activeMedications domain 0,* class com.demo.Medication;
+    public int age;
+    public java.util.ArrayList allergies domain 0,* class com.demo.Medication;
+    public float creatineLevel;
+    public string encounterDX;
+    public java.util.ArrayList messages domain 0,* class string;
+    public string name;
+    public string patientID;
+    public java.util.ArrayList problems domain 0,* class string;
+    public string recommendedDose;
+    public com.demo.Medication recommendedDrug;
+    public int weight;
+    public Patient();
+    public void addMessage(string arg);
+    public void addProblem(string arg);
+    public boolean hasAllergyWith(com.demo.Medication arg);
+}
+

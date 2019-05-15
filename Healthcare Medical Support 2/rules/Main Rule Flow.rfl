@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>Main Rule Flow</name>
+  <uuid>ca0b2ef8-7fc9-456d-9733-def37919bff3</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel><Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+    <Body>
+        <TaskList>
+            <StartTask Identifier="task_0">
+                <Actions Language="bal"><![CDATA[Send message to 'the patient' : "Hello from start task";]]></Actions>
+            </StartTask>
+            <StopTask Identifier="task_1"/>
+            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_2" Ordering="Default">
+                <RuleList>
+                    <Package Name="1 Infer Facts"/>
+                </RuleList>
+            </RuleTask>
+            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_3" Ordering="Default">
+                <RuleList>
+                    <Package Name="2 Medical decision support"/>
+                </RuleList>
+            </RuleTask>
+            <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="task_4" Ordering="Default">
+                <RuleList>
+                    <Package Name="3 Drug interaction"/>
+                </RuleList>
+            </RuleTask>
+        </TaskList>
+        <NodeList>
+            <TaskNode Identifier="node_0" Task="task_0"/>
+            <TaskNode Identifier="node_1" Task="task_1"/>
+            <TaskNode Identifier="node_2" Task="task_2"/>
+            <TaskNode Identifier="node_3" Task="task_3"/>
+            <TaskNode Identifier="node_4" Task="task_4"/>
+            <BranchNode Identifier="node_5"/>
+        </NodeList>
+        <TransitionList>
+            <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+            <Transition Identifier="transition_2" Source="node_2" Target="node_5"/>
+            <Transition Identifier="transition_3" Source="node_3" Target="node_4"/>
+            <Transition Identifier="transition_4" Source="node_4" Target="node_1"/>
+            <Transition Identifier="transition_5" Source="node_5" Target="node_1">
+                <Conditions Language="bal"><![CDATA[false]]></Conditions>
+            </Transition>
+            <Transition Identifier="transition_6" Source="node_5" Target="node_3"/>
+        </TransitionList>
+    </Body>
+    <Resources>
+        <ResourceSet Locale="en_US">
+            <Data Name="node_0#name">node_0</Data>
+            <Data Name="node_0#x">88.30745</Data>
+            <Data Name="node_0#y">0.0</Data>
+            <Data Name="node_1#name">node_1</Data>
+            <Data Name="node_1#x">92.59648</Data>
+            <Data Name="node_1#y">390.0</Data>
+            <Data Name="node_2#label">Infer Facts</Data>
+            <Data Name="node_2#name">node_2</Data>
+            <Data Name="node_2#x">38.307453</Data>
+            <Data Name="node_2#y">70.0</Data>
+            <Data Name="node_3#label">Medical Decision Support</Data>
+            <Data Name="node_3#name">node_3</Data>
+            <Data Name="node_3#x">-93.950836</Data>
+            <Data Name="node_3#y">230.0</Data>
+            <Data Name="node_4#label">Drug Interaction</Data>
+            <Data Name="node_4#name">node_4</Data>
+            <Data Name="node_4#x">-63.568027</Data>
+            <Data Name="node_4#y">310.0</Data>
+            <Data Name="node_5#label">Data Valid?</Data>
+            <Data Name="node_5#name">node_5</Data>
+            <Data Name="node_5#x">83.30745</Data>
+            <Data Name="node_5#y">150.0</Data>
+            <Data Name="transition_5#label">No</Data>
+            <Data Name="transition_6#label">Yes</Data>
+        </ResourceSet>
+    </Resources>
+    <Properties/>
+</Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

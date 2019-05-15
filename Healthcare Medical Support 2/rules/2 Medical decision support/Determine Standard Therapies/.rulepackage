@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Determine Standard Therapies</name>
+  <uuid>52699052-edeb-4e7a-a857-f3fba710232f</uuid>
+  <documentation><![CDATA[This folder should contain normal drug recommendations for the encounter DX that our organization covers.]]></documentation>
+</ilog.rules.studio.model.base:RulePackage>

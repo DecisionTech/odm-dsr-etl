@@ -1,0 +1,43 @@
+# Vocabulary Properties
+uuid = b892b64d-083a-4f28-93a0-65c9a95987a9
+
+# com.demo.Medication
+com.demo.Medication#concept.label = medication
+com.demo.Medication.NDC#phrase.action = set the NDC of {this} to {NDC}
+com.demo.Medication.NDC#phrase.navigation = {NDC} of {this}
+com.demo.Medication.amoxicillin#instance.label = Amoxicillin
+com.demo.Medication.cefuroxime#instance.label = Cefuroxime
+com.demo.Medication.coumadin#instance.label = Coumadin
+com.demo.Medication.levoflaxin#instance.label = Levofloxacin
+com.demo.Medication.name#phrase.action = set the name of {this} to {name}
+com.demo.Medication.name#phrase.navigation = {name} of {this}
+com.demo.Medication.penicillin#instance.label = Penicillin
+
+# com.demo.Patient
+com.demo.Patient#concept.label = patient
+com.demo.Patient.AST#phrase.action = set the AST of {this} to {AST}
+com.demo.Patient.AST#phrase.navigation = {AST} of {this}
+com.demo.Patient.activeMedications#phrase.action = set the active medications of {this} to {active medication}
+com.demo.Patient.activeMedications#phrase.navigation = {active medication} of {this}
+com.demo.Patient.addMessage(java.lang.String)#phrase.action = Send message to {this} : {0} 
+com.demo.Patient.addProblem(java.lang.String)#phrase.action = Create new problem for {this} : {0} 
+com.demo.Patient.age#phrase.action = set the age of {this} to {age}
+com.demo.Patient.age#phrase.navigation = {age} of {this}
+com.demo.Patient.allergies#phrase.navigation = {allergy} of {this}
+com.demo.Patient.creatineLevel#phrase.action = set the creatine level of {this} to {creatine level}
+com.demo.Patient.creatineLevel#phrase.navigation = {creatine level} of {this}
+com.demo.Patient.encounterDX#phrase.action = set the encounter DX of {this} to {encounter DX}
+com.demo.Patient.encounterDX#phrase.navigation = {encounter DX} of {this}
+com.demo.Patient.hasAllergyWith(com.demo.Medication)#phrase.navigation = {this} has allergy with {0}
+com.demo.Patient.messages#phrase.navigation = {message} of {this}
+com.demo.Patient.name#phrase.action = set the name of {this} to {name}
+com.demo.Patient.name#phrase.navigation = {name} of {this}
+com.demo.Patient.patientID#phrase.action = set the patient ID of {this} to {patient ID}
+com.demo.Patient.patientID#phrase.navigation = {patient ID} of {this}
+com.demo.Patient.problems#phrase.navigation = {problem} of {this}
+com.demo.Patient.recommendedDose#phrase.action = Recommended dose for {this} is {recommended dose}
+com.demo.Patient.recommendedDose#phrase.navigation = {recommended dose} of {this}
+com.demo.Patient.recommendedDrug#phrase.action = Recommended drug for {this} is {recommended drug}
+com.demo.Patient.recommendedDrug#phrase.navigation = {recommended drug} of {this}
+com.demo.Patient.weight#phrase.action = set the weight of {this} to {weight}
+com.demo.Patient.weight#phrase.navigation = {weight} of {this}

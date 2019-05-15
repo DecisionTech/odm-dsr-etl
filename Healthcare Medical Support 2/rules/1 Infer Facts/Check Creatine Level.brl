@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check Creatine Level</name>
+  <uuid>db9666ff-b76e-4e2f-8409-88e58a36d63c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[IF 
+    the creatine level of 'the patient' is more than 1.4
+THEN 
+    set 'creatine clearance' to 
+    ( ( 140 - the age of 'the patient' ) * the weight of 'the patient' ) 
+      / ( the creatine level of 'the patient' * 72 ) ;
+	]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

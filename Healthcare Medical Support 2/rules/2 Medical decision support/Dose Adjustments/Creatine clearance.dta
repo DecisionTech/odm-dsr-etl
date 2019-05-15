@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>Creatine clearance</name>
+  <uuid>0212b158-58d9-43ed-b50f-300423fe7fa5</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable">
+    <Body>
+                <Properties>
+                    <Property Name="RowOrdering"><![CDATA[Automatic]]></Property>
+                    <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+                </Properties>
+                <Structure>
+                    <ConditionDefinitions>
+                        <ConditionDefinition Id="C0">
+                            <ExpressionDefinition>
+                                <Text><![CDATA['creatine clearance' is between <min> and <max>]]></Text>
+                            </ExpressionDefinition>
+                        </ConditionDefinition>
+                    </ConditionDefinitions>
+                    <ActionDefinitions>
+                        <ActionDefinition Id="A0">
+                            <ExpressionDefinition>
+                                <Text><![CDATA[Recommended dose for 'the patient'  is <a string>]]></Text>
+                            </ExpressionDefinition>
+                        </ActionDefinition>
+                    </ActionDefinitions>
+                </Structure>
+                <Contents>
+                    <Partition DefId="C0">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is less than <a number>]]></Text>
+                                <Param><![CDATA[50]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["250mg every 24 hours for 14 days"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                                <Param><![CDATA[50]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA["500mg every 24 hours for 14 days"]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression/>
+                            <ActionSet/>
+                        </Condition>
+                    </Partition>
+                </Contents>
+            </Body>
+    <Resources DefaultLocale="en_US">
+                <ResourceSet Locale="en_US">
+                    <Data Name="Definitions(C0)#HeaderText"><![CDATA[Creatinine clearance]]></Data>
+                    <Data Name="Definitions(A0)#HeaderText"><![CDATA[Recommended dose]]></Data>
+                    <Data Name="Definitions(C0)#Width"><![CDATA[168]]></Data>
+                    <Data Name="Definitions(A0)#Width"><![CDATA[221]]></Data>
+                    <Data Name="Definitions(C0)[]#Format"><![CDATA[{0} ml/min]]></Data>
+                </ResourceSet>
+            </Resources>
+</DT>
+</definition>
+</ilog.rules.studio.model.dt:DecisionTable>

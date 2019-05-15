@@ -1,0 +1,38 @@
+<b2x:translation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.ilog.com/JRules/1.1/Translation ilog/rules/schemas/1_1/b2x.xsd"
+        xmlns:b2x="http://schemas.ilog.com/JRules/1.1/Translation">
+    <id>fd55323b-702b-4b3e-aa60-4c464d7997d1</id>
+    <class>
+        <businessName>com.demo.Medication</businessName>
+        <attribute>
+            <name>amoxicillin</name>
+            <getter language="irl"><![CDATA[
+            return new com.demo.Medication("4", "Amoxicillin");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>cefuroxime</name>
+            <getter language="irl"><![CDATA[
+            return new com.demo.Medication("5","Cefuroxime");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>coumadin</name>
+            <getter language="irl"><![CDATA[
+            return new com.demo.Medication("1", "Coumadin");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>levoflaxin</name>
+            <getter language="irl"><![CDATA[
+            return new com.demo.Medication("2","Levofloxacin");
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>penicillin</name>
+            <getter language="irl"><![CDATA[
+            return new com.demo.Medication("3","Penicillin");
+            ]]></getter>
+        </attribute>
+    </class>
+</b2x:translation>

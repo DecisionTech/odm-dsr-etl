@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="MedicalSupportRuleset" usingRuleflow="true" ruleflowName="Main Rule Flow" usingExtractor="true" targetRuleProjectName="Healthcare Medical Support 2">
+  <name>Medical Operation</name>
+  <uuid>ef12a5f3-2d3e-40eb-9d1e-d7d0afeb64b9</uuid>
+  <referencedVariables variableName="patient" variableSetName="patient" direction="IN_OUT">
+    <variableSet href="../rules/variables.var#b538803b-02ea-426d-845a-51bf235c9f1f"/>
+  </referencedVariables>
+  <ruleflow href="../rules/Main%20Rule%20Flow.rfl#ca0b2ef8-7fc9-456d-9733-def37919bff3"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="Medical Operationextractor" validator="Default Validator"/>
+  <targetRuleProject href="../../Healthcare%20Medical%20Support%202#d962087a-d715-438b-b444-4c9d99070b24"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
